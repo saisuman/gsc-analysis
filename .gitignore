@@ -127,3 +127,10 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# Some files we generate.
+ccache.json
+dump/*
+bin/*
+lib/*
+checkpoint
