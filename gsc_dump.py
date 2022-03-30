@@ -36,7 +36,7 @@ flags.DEFINE_integer("retry_backoff_seconds", 5,
                      "Wait these many seconds before retrying if an error occurs.")
 
 flags.DEFINE_string("list_of_sites",
-                    "https://en.wikipedia.org/,https://en.m.wikipedia.org/",
+                    "sc-domain:wikipedia.org",
                     "A comma-separated list of sites to look up data for. "
                     "Please note that these will all be unified into a single dump.")
 

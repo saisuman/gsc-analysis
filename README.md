@@ -3,27 +3,21 @@ Some code that helps you download and process data from Google's Search Console 
 
 Here's how to get started:
 
-1. Use pyvenv to set up the libraries you'll need.
+1. Use pyvenv to set up the libraries you'll need.  
 
-$ pyvenv create gsc-analysis
-$ pyvenv shell gsc-analysis
-Copied source /home/saisuman/.local/share/pyvenv/gsc-analysis/bin/activate to clipboard.
-$ source /usr/local/bin/share/pyvenv/gsc-analysis/bin/activate
-(gsc-analysis) $ 
+`$ python3 -m venv .`
+`$ source bin/activate`
 
-2. Install all requried packages through pip3.
+2. Install all requried packages through pip3.  
 
-(gsc-analysis) $ cat requirements.txt | xargs pip3 install
+`(gsc-analysis) $ cat requirements.txt | xargs pip3 install`
 
-3. Run this:
+3. Run this to get all the data for the last 16 months.  
 
-(gsc-analysis) $ python3 gsc_dump.py  \
-  --client_secret=[SECRET]  \
-  --client_id=[ID]  \
-  --start_date=2022-01-01  \
-  --end_date=2022-01-09  \
-  --csv_file_prefix=dump/query-daily-searchconsole  \
-  --noquery_mode
+`(gsc-analysis) $ ./run.sh full`
+
+4. Run the following in a daily cronjob.
+
 
 You will need to obtain credentials from the Google API Console.
 

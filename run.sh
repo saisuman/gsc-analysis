@@ -7,6 +7,9 @@ DUMP_DIR=${BASE}/dump
 AUTH_FILE=${BASE}/wmf-sc-experiments-55c5b8f5a409.json
 CHECKPOINT_FILE=${BASE}/checkpoint.json
 
+# Initialize the virtualenv.
+sh ${BASE}/bin/activate
+
 echo "Today is: $(date -I)"
 curr_ts=$(date +%s)
 if [ "$1" == "full" ]
@@ -32,3 +35,4 @@ fi
     --end_date=${enddate} \
     --csv_file_prefix=${DUMP_DIR}/searchconsole \
     --checkpoint_filename=${CHECKPOINT_FILE}
+
